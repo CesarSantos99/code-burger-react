@@ -69,29 +69,6 @@ export const ErrorMessage = styled.p`
   margin-top: 3px;
 `
 
-export const Button = styled.button`
-  width: 183px;
-  height: 36px;
-  background: #9758a6;
-  border-radius: 20px;
-  border: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #eeeeee;
-  margin-top: 75px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-`
-
 export const SignIntLink = styled.p`
   font-style: normal;
   font-weight: 400;

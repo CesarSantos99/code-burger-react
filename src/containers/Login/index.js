@@ -5,6 +5,7 @@ import * as Yup from 'yup'
 
 import LoginImg from '../../assets/logo-hamburguer.svg'
 import Logo from '../../assets/logo.svg'
+import Button from '../../components/Button'
 import apiCodeBurger from '../../services/api'
 import {
   Container,
@@ -12,7 +13,6 @@ import {
   ContainerItens,
   P,
   Input,
-  Button,
   SignIntLink,
   ErrorMessage
 } from './styles'
