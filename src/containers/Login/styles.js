@@ -24,6 +24,11 @@ export const ContainerItens = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
   h1 {
     font-style: normal;
     font-weight: 500;
@@ -49,11 +54,19 @@ export const Input = styled.input`
   width: 391.42px;
   height: 38.32px;
   background: #ffffff;
-  border: none;
+  border: ${props => (props.error ? '3px solid #CC1717' : 'none')};
   border-radius: 5px;
   padding: 10px;
   font-size: 16px;
-  cursor: pointer;
+`
+
+export const ErrorMessage = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #cc1717;
+  margin-top: 3px;
 `
 
 export const Button = styled.button`
