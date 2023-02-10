@@ -75,7 +75,6 @@ export const SignIntLink = styled.p`
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
-  margin-top: 30px;
 
   a {
     cursor: pointer;
