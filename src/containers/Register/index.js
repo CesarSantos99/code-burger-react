@@ -94,7 +94,7 @@ function Register() {
         </form>
 
         <SignIntLink>
-          Já possui conta ? <a> Sign In</a>
+          Já possui conta ? <a> Sign In </a>
         </SignIntLink>
       </ContainerItens>
     </Container>
