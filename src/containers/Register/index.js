@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
 import Logo from '../../assets/logo.svg'
@@ -28,7 +29,7 @@ function Register() {
       .min(6, 'A senha deve ter pelo menos 6 digitos'),
     confirmPassword: Yup.string()
       .required('A senha é obrigarória')
-      .oneOf([Yup.ref('password')], 'a senha devem ser iguais')
+      .oneOf([Yup.ref('password')], 'A senha devem ser iguais')
   })
 
   const {
@@ -40,12 +41,22 @@ function Register() {
   })
 
   const onSubmit = async clientData => {
-    const response = await apiCodeBurger.post('users', {
-      name: clientData.name,
-      email: clientData.email,
-      password: clientData.password
-    })
-    console.log(response)
+    try {
+      await apiCodeBurger.post('users', {
+        name: clientData.name,
+        email: clientData.email,
+        password: clientData.password
+      })
+      toast.success('Cadastro criado com sucesso', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored'
+      })
+    } catch (err) {}
   }
 
   return (
