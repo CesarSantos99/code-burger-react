@@ -42,21 +42,26 @@ function Register() {
 
   const onSubmit = async clientData => {
     try {
-      await apiCodeBurger.post('users', {
-        name: clientData.name,
-        email: clientData.email,
-        password: clientData.password
-      })
-      toast.success('Cadastro criado com sucesso', {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored'
-      })
-    } catch (err) {}
+      const { status } = await apiCodeBurger.post(
+        'users',
+        {
+          name: clientData.name,
+          email: clientData.email,
+          password: clientData.password
+        },
+        { validateStatus: () => true }
+      )
+
+      if (status === 201 || status === 200) {
+        toast.success('Cadastro criado com sucesso')
+      } else if (status === 409) {
+        toast.error('E-mail já cadastrado! Faça o login para continuar')
+      } else {
+        throw new Error()
+      }
+    } catch (err) {
+      toast.error('Falha no sistema! Tente novamente')
+    }
   }
 
   return (
