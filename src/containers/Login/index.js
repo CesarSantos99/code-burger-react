@@ -7,6 +7,7 @@ import * as Yup from 'yup'
 import LoginImg from '../../assets/logo-hamburguer.svg'
 import Logo from '../../assets/logo.svg'
 import Button from '../../components/Button'
+import { useUser } from '../../hooks/UserContentx'
 import apiCodeBurger from '../../services/api'
 import {
   Container,
@@ -19,6 +20,10 @@ import {
 } from './styles'
 
 function Login() {
+  const users = useUser()
+
+  console.log(users)
+
   const schema = Yup.object().shape({
     email: Yup.string()
       .email('Digite um e-mail válido')
