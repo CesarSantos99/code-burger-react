@@ -20,9 +20,7 @@ import {
 } from './styles'
 
 function Login() {
-  const users = useUser()
-
-  console.log(users)
+  const { putUseData, userData } = useUser()
 
   const schema = Yup.object().shape({
     email: Yup.string()
@@ -42,7 +40,7 @@ function Login() {
   })
 
   const onSubmit = async clientData => {
-    const response = await toast.promise(
+    const { data } = await toast.promise(
       apiCodeBurger.post('sessions', {
         email: clientData.email,
         password: clientData.password
@@ -54,7 +52,7 @@ function Login() {
       }
     )
 
-    console.log(response)
+    putUseData(data)
   }
 
   return (
