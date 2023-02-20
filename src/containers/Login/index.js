@@ -20,7 +20,7 @@ import {
 } from './styles'
 
 function Login() {
-  const { putUseData, userData } = useUser()
+  const { putUseData } = useUser()
 
   const schema = Yup.object().shape({
     email: Yup.string()
