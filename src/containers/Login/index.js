@@ -21,7 +21,7 @@ import {
 } from './styles'
 
 function Login() {
-  const { putUseData } = useUser()
+  const { putUserData } = useUser()
 
   const schema = Yup.object().shape({
     email: Yup.string()
@@ -53,7 +53,7 @@ function Login() {
       }
     )
 
-    putUseData(data)
+    putUserData(data)
   }
 
   return (

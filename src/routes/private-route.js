@@ -3,7 +3,7 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
 function PrivateRoute({ component, ...rest }) {
-  const user = localStorage.getItem('codeburger:userData')
+  const user = localStorage.getItem('codeburgee:userData')
 
   if (!user) {
     return <Redirect to="/login" />

@@ -6,7 +6,7 @@ const UserContext = createContext({})
 export const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState({})
 
-  const putUseData = async userInfo => {
+  const putUserData = async userInfo => {
     setUserData(userInfo)
 
     await localStorage.setItem('codeburgee:userData', JSON.stringify(userInfo))
@@ -25,7 +25,7 @@ export const UserProvider = ({ children }) => {
   }, [])
 
   return (
-    <UserContext.Provider value={{ putUseData, userData }}>
+    <UserContext.Provider value={{ putUserData, userData }}>
       {children}
     </UserContext.Provider>
   )
