@@ -3,7 +3,7 @@ import Carousel from 'react-elastic-carousel'
 
 import Category from '../../assets/category.png'
 import api from '../../services/api'
-import { Container, CategoryImg } from './styles'
+import { Container, CategoryImg, ContainerItems, Image, Button } from './styles'
 
 function CategoryCarousel() {
   const [categories, setCategories] = useState([])
@@ -36,10 +36,10 @@ function CategoryCarousel() {
       >
         {categories &&
           categories.map(category => (
-            <div key={category.id}>
-              <img src={category.url} alt="FDoto da Categoria" />
-              <button>{category.name}</button>
-            </div>
+            <ContainerItems key={category.id}>
+              <Image src={category.url} alt="FDoto da Categoria" />
+              <Button>{category.name}</Button>
+            </ContainerItems>
           ))}
       </Carousel>
     </Container>
