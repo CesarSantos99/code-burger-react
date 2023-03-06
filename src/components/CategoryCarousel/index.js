@@ -37,7 +37,7 @@ function CategoryCarousel() {
         {categories &&
           categories.map(category => (
             <ContainerItems key={category.id}>
-              <Image src={category.url} alt="FDoto da Categoria" />
+              <Image src={category.url} alt="Foto da Categoria" />
               <Button>{category.name}</Button>
             </ContainerItems>
           ))}
