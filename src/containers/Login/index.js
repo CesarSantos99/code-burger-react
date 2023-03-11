@@ -7,7 +7,7 @@ import * as Yup from 'yup'
 
 import LoginImg from '../../assets/logo-hamburguer.svg'
 import Logo from '../../assets/logo.svg'
-import Button from '../../components/Button'
+import { Button } from '../../components'
 import { useUser } from '../../hooks/UserContentx'
 import apiCodeBurger from '../../services/api'
 import {
@@ -20,7 +20,7 @@ import {
   ErrorMessage
 } from './styles'
 
-function Login() {
+export function Login() {
   const history = useHistory()
   const { putUserData } = useUser()
 
@@ -101,5 +101,3 @@ function Login() {
     </Container>
   )
 }
-
-export default Login
