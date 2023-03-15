@@ -10,7 +10,6 @@ export const CartProvider = ({ children }) => {
     const cartIndex = cartProducts.findIndex(prd => prd.id === product.id)
 
     let newCartProducts = []
-
     if (cartIndex >= 0) {
       newCartProducts = cartProducts
 
@@ -31,7 +30,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     const loadUserData = async () => {
-      const clientCartData = await localStorage.getItem('codeburger:cartInfo')
+      const clientCartData = await localStorage.getItem('codeburgee:cartInfo')
 
       if (clientCartData) {
         setCartProducts(JSON.parse(clientCartData))
