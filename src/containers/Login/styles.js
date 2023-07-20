@@ -12,13 +12,13 @@ export const Container = styled.div`
 `
 
 export const LoginImage = styled.img`
-  height: 70%;
+  height: 80%;
 `
 
 export const ContainerItens = styled.div`
   background: #373737;
   border-radius: 0 10px 10px 0;
-  height: 70%;
+  height: 80%;
   padding: 25px 75px;
   display: flex;
   flex-direction: column;
@@ -36,17 +36,17 @@ export const ContainerItens = styled.div`
     line-height: 28px;
     color: #ffffff;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 40px;
   }
 `
 
 export const P = styled.p`
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 14px;
   color: #ffffff;
-  margin-top: 28px;
+  margin-top: 15px;
   margin-bottom: 5px;
 `
 
