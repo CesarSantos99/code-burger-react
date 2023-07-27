@@ -43,8 +43,7 @@ export const Image = styled.img`
 export const Button = styled.button`
   margin-top: 16px;
   background: #9758a6;
-  box-shadow: 0px 5px 10px rgba(151, 88, 166, 0.22),
-    0px 20px 40px rgba(151, 88, 166, 0.24);
+  box-shadow: 0px 5px 10px rgba(151, 88, 166, 0.22);
   border-radius: 8px;
   height: 50px;
   border: none;
