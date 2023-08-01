@@ -1,7 +1,7 @@
 import React from 'react'
 
 import CartLogo from '../../assets/logo-carinho.svg'
-import { CartItems } from '../../components'
+import { CartItems, CartResume } from '../../components'
 import { Container, CartImg, Wrapper } from './styles'
 
 export function Cart() {
@@ -10,6 +10,7 @@ export function Cart() {
       <CartImg src={CartLogo} alt="Logo do carrinho" />
       <Wrapper>
         <CartItems />
+        <CartResume />
       </Wrapper>
     </Container>
   )
